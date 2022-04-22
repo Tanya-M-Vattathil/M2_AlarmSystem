@@ -22,8 +22,23 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
+#include <arduino.h>
 
 void setup();
+void scan();
+
+void scan()
+{
+    if (trigPin=1){
+        delay(50);
+    }
+	else{
+        travel_time=pulseIn(echoPin, HIGH,16000000L);
+	    distance=(travel_time/2)/29.1;
+	    delay(50);
+    }
+	
+}
 
 void setup()
 {
