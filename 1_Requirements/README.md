@@ -8,8 +8,8 @@
 * How: using ultrasonic sensors and calculating distances
 
 ### SWOT ANALYSIS
-* Strengths:
-* Weakness: 
+* Strengths: User friendly
+* Weakness: has delays
 * Opportunities: Can be implemented in toy vehicles
 * Threats: Not suitable in automobiles yet
 
@@ -25,6 +25,6 @@
 |High level requirements| Description|
 |---|----|
 |HLR1|Ultrasonic sensor|
-|HLR2| |
-|HLR3| |
-|HLR4| |
+|HLR2|Motor driver |
+|HLR3|Servomotor |
+|HLR4|LED |
