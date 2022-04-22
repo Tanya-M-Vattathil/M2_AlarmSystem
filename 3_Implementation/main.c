@@ -1,12 +1,12 @@
 //MOTOR_A
-#define ENA        DDB3		 //PWM Enable Motor 1				-- Pin 11 / OCOA
+#define EN_A       DDB3		 //PWM Enable Motor 1				-- Pin 11 / OCOA
 #define IN1_DDR    DDC4		 //DATA DIRECTION REGISTER~~~Control direction  of Motor 1	-- Pin A4
 #define IN2_DDR    DDC5		 //DATA DIRECTION REGISTER~~~Control direction of Motor 1    -- Pin A5
 #define IN1_PORT   PORTC4    //PORT~~~Control direction of Motor 1	-- Pin A4
 #define IN2_PORT   PORTC5    //PORT~~~Control direction of Motor 1    -- Pin A5
 
 //MOTOR_B
-#define ENB		   DDD3      //PWM Enable Motor 2				-- Pin 3 / OCOB
+#define EN_B		   DDD3      //PWM Enable Motor 2				-- Pin 3 / OCOB
 #define IN3_DDR    DDC3      //DATA DIRECTION REGISTER~~~Control direction of Motor 2	-- Pin A3
 #define IN4_DDR    DDC2      //DATA DIRECTION REGISTER~~~Control direction of Motor 2    -- Pin A2
 #define IN3_PORT   PORTC3    //PORT~~~Control direction of Motor 1	-- Pin A3
@@ -33,18 +33,18 @@ void setup()
 	DDRB |= (1<<SERVO);
 	
 	// motor A
-	DDRB |= (1<<ENA); //pin 6 output PWM
+	DDRB |= (1<<EN_A); //pin 6 output PWM
 	DDRC = (1<<IN1_DDR) | (1<<IN2_DDR); // A4,A5 pins for controlling the direction of motor
 	
 	//motor B
-	DDRD |= (1<<ENB); //pin 5 output PWM
+	DDRD |= (1<<EN_B); //pin 5 output PWM
 	DDRC = (1<<IN3_DDR) | (1<<IN4_DDR); //2,4 pins for controlling the direction of motor B
 	
 	TCCR2A = (1<<COM2A1) | (1<<COM2B1) | (1<<WGM21) | (1<<WGM20); //clear pin on compare match, update pin on BOTTOM, TOPT= 0xFF
 	TCCR1A = (1<<COM1A1) | (1<<COM1A0) | (1<<WGM11); // inverting mode fast pwm with icr1 reg as top
 	
 	
-	TIMSK2 = (1<<TOIE2); // intterupt on overflow
+	TIMSK2 = (1<<TOIE2); // interupt on overflow
 	
 	
 	OCR2A = (dutyA/100) *255;
