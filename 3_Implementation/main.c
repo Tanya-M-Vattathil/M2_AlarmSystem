@@ -24,6 +24,11 @@
 #include <util/delay.h>
 #include <arduino.h>
 
+uint16_t FrontDistance;
+uint16_t LeftDistance;
+uint16_t RightDistance;
+int distance,travel_time;
+
 void setup();
 void scan();
 
@@ -59,7 +64,7 @@ void setup()
 	TCCR1A = (1<<COM1A1) | (1<<COM1A0) | (1<<WGM11); // inverting mode fast pwm with icr1 reg as top
 	
 	
-	TIMSK2 = (1<<TOIE2); // interupt on overflow
+	TIMSK2 = (1<<TOIE2); // interrupt on overflow
 	
 	
 	OCR2A = (dutyA/100) *255;
