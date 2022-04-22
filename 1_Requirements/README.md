@@ -8,10 +8,10 @@
 * How: using ultrasonic sensors and calculating distances
 
 ### SWOT ANALYSIS
-* Strengths: User friendly
-* Weakness: has delays
+* Strengths: User friendly and moves autonomously without relying on outside controls.
+* Weakness: Ultrasonic sensor may not be very accurate when used outdoors
 * Opportunities: Can be implemented in toy vehicles
-* Threats: Not suitable in automobiles yet
+* Threats: Risky to use outdoors as it might be accident prone 
 
 ### Low Level Requirements
 |Low level requirements| Description|
