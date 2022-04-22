@@ -1,12 +1,12 @@
 //MOTOR_A
-#define EN_A       DDB3		 //PWM Enable Motor 1				-- Pin 11 / OCOA
+#define EN_A       DDB3		 //PWM Enable Motor 1				-- Pin 11 / OC0A
 #define IN1_DDR    DDC4		 //DATA DIRECTION REGISTER~~~Control direction  of Motor 1	-- Pin A4
 #define IN2_DDR    DDC5		 //DATA DIRECTION REGISTER~~~Control direction of Motor 1    -- Pin A5
 #define IN1_PORT   PORTC4    //PORT~~~Control direction of Motor 1	-- Pin A4
 #define IN2_PORT   PORTC5    //PORT~~~Control direction of Motor 1    -- Pin A5
 
 //MOTOR_B
-#define EN_B		   DDD3      //PWM Enable Motor 2				-- Pin 3 / OCOB
+#define EN_B		   DDD3      //PWM Enable Motor 2				-- Pin 3 / OC0B
 #define IN3_DDR    DDC3      //DATA DIRECTION REGISTER~~~Control direction of Motor 2	-- Pin A3
 #define IN4_DDR    DDC2      //DATA DIRECTION REGISTER~~~Control direction of Motor 2    -- Pin A2
 #define IN3_PORT   PORTC3    //PORT~~~Control direction of Motor 1	-- Pin A3
